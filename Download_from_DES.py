@@ -76,6 +76,6 @@ for i in range(number):
     os.system("clear")
     print("downloading",i,"/",number)
     #print("wget --user=",user," --password=",password," https://desar2.cosmology.illinois.edu/DESFiles/desarchive/",Objects['PATH'][i],"/",Objects['FILENAME'][i],Objects['COMPRESSION'][i], sep ="")
-    os.system("wget --user="+user+" --password="+password+" https://desar2.cosmology.illinois.edu/DESFiles/desarchive/"+Objects['PATH'][i]+"/"+Objects['FILENAME'][i]+Objects['COMPRESSION'][i])
+    subprocess.call("wget --user="+user+" --password="+password+" https://desar2.cosmology.illinois.edu/DESFiles/desarchive/"+Objects['PATH'][i]+"/"+Objects['FILENAME'][i]+Objects['COMPRESSION'][i], shell = True)
 #FINISHED
 print("FINISHED")
